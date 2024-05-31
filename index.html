@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misha shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <nav>
+                <div class="menu-item">
+
+                    <a href="#" onclick="showAllMice()">Меню</a>
+                    <div class="submenu">
+                        <a href="#" onclick="filterMice('phone')">Телефони</a>
+                        <a href="#" onclick="filterMice('tablet')">Планшети</a>
+                        <a href="#" onclick="filterMice('laptop')">Ноутбуки</a>
+                        <a href="#" onclick="filterMice('headphone')">Навушники</a>
+                        <a href="#" onclick="filterMice('3-dprinter')">3-D принтери</a>
+                    </div>
+                </div>
+                <a href="#">Про нас</a>
+                <a href="#">Спеціальні пропозиції</a>
+            </nav>
+        </div>
+
+        <div class="logo">
+            <img src="image/unnamed.gif" alt="04">
+        </div>
+
+        <div class="contact-info">
+            <p>Телефон: (380) 848-54-09</p>
+            <p>Email:irjg@sjdfhsj.com.ua</p>
+            <p>Адреса:Київ,вул.Анни Ахматової, 22</p>
+            <div class="social-links">
+                <a href="#"><img src="temeg/werwer.jfif" alt="facebook"></a>
+                <a href="#"><img src="temeg/yuyuy.jfif" alt="instagram"></a>
+                <a href="#"><img src="temeg/kgkg.png" alt="twiter"></a>
+            </div>
+        </div>
+    </header>
+
+
+    <body>
+        <div class="shopping_cart">
+            <div class="shopping">
+                <img src="image/R.png">
+                <span class="quantity">0</span>
+            </div>
+        </div>
+        <div class="list">
+        </div>
+        <div class="cards">
+            <h1>Товари у кошику</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Закрити</div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card phone" onclick="openModal('modal1')">
+                <img src="image/1.jpg" alt="galaxy a34 5g">
+                <h2>Galaxy a34 5g</h2>
+                <p>В наявності</p>
+                <p>10999грн</p>
+                <button onclick="addToCard(0)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="openModal('modal2')">
+                <img src="image/2.jpg" alt="iphone 14">
+                <h2>iphone 14</h2>
+                <p>В наявності</p>
+                <p>31999грн</p>
+                <button onclick="addToCard(1)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="openModal('modal3')">
+                <img src="image/3.jpg" alt="iphone 11">
+                <h2>iphone 11</h2>
+                <p>В наявності</p>
+                <p>20999грн</p>
+                <button onclick="addToCard(2)">Додати в кошик</button>
+            </div>
+            <div class="card headphone" onclick="openModal('modal4')">
+                <img src="image/4.jpg" alt="airpods-3">
+                <h2>airpods-3</h2>
+                <p>В наявності</p>
+                <p>6999грн</p>
+                <button onclick="addToCard(3)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="openModal('modal5')">
+                <img src="image/5.webp" alt="Galaxy S23 Ultra ">
+                <h2>Galaxy S23 Ultra </h2>
+                <p>В наявності</p>
+                <p>52999грн</p>
+                <button onclick="addToCard(4)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="openModal('modal6')">
+                <img src="image/6.webp" alt="Galaxy Fold5">
+                <h2>Galaxy Fold5</h2>
+                <p>В наявності</p>
+                <p>63799грн</p>
+                <button onclick="addToCard(5)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="open=Modal('modal7')">
+                <img src="image/7.webp" alt="Galaxy Flip3 5G">
+                <h2>Galaxy Flip3 5G</h2>
+                <p>В наявності</p>
+                <p>23379грн</p>
+                <button onclick="addToCard(6)">Додати в кошик</button>
+            </div>
+            <div class="card phone" onclick="openModal('modal8')">
+                <img src="image/8.webp" alt="Galaxy Flip5">
+                <h2>Galaxy Flip5</h2>
+                <p>В наявності</p>
+                <p>39999грн</p>
+                <button onclick="addToCard(7)">Додати в кошик</button>
+            </div>
+            <div class="card 3-dprinter" onclick="openModal('modal9')">
+                <img src="image/9.avif" alt="3-D принтер Creality CR-K1">
+                <h2>3-D принтер Creality CR-K1</h2>
+                <p>В наявності</p>
+                <p>27999грн</p>
+                <button onclick="addToCard(8)">Додати в кошик</button>
+            </div>
+            <div class="card laptop" onclick="openModal('modal10')">
+                <img src="image/10.avif" alt="MacBook Air M1 13.3">
+                <h2>MacBook Air M1 13.3</h2>
+                <p>В наявності</p>
+                <p>43499грн</p>
+                <button onclick="addToCard(9)">Додати в кошик</button>
+            </div>
+            <div class="card tablet" onclick="openModal('modal11')">
+                <img src="image/11.webp" alt="iPad 10.9">
+                <h2>iPad 10.9</h2>
+                <p>В наявності</p>
+                <p>22499грн</p>
+                <button onclick="addToCard(10)">Додати в кошик</button>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/sm-a346_galaxy_a34_5g_awesome_silver_front_result.jpg" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>ціна 10999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(0)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/2.jpg" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>ціна 52999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(4)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/09b50ab1617f7d174fda7e370c9f374f__1.jpg" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>колір зелений</li>
+                            <li>ціна 20999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(2)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/09b50ab1617f7d174fda7e370c9f374f__1.jpg" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Навушники гарні і дешеві</li>
+                            <li>колір білий</li>
+                            <li>ціна 6999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(3)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/Rectangle-122-large-webp.webp" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>колір чорний</li>
+                            <li>ціна 52999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(4)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/Rectangle-122-large-webp.webp" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>ціна 23379 грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(5)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <div class="modal-flex">
+                    <img class="modal-img" src="image/Rectangle-122-large-webp.webp" alt="">
+                    <div class="modal-info">
+                        <h2></h2>
+                        <p><strong>Опис:</strong>велика пам'ять, гарний колір</p>
+                        <p><strong>Характеристика</strong></p>
+                        <ul>
+                            <li>Телефон гарний</li>
+                            <li>колір чорний</li>
+                            <li>ціна 52999грн</li>
+                            <li>не б\у</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Інформація про доставку:</strong> Стандартна доставка протягом 3-5 робочих днів.
+                            Експрес-доставка доступна за додаткову плату.</p>
+                        <button onclick="addToCard(6)">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <p>Телефон: (380) 848-54-09</p>
+                    <p>Email:irjg@sjdfhsj.com.ua</p>
+                    <p>Адреса:Київ,вул.Анни Ахматової, 22</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Інформація</h3>
+                    <ul>
+                        <li><a href="#">Доставка і оплата</a></li>
+                        <li><a href="#">Гарантія і повернення</a></li>
+                        <li><a href="#">Політика конфіденційності</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-links">
+                        <a href="#"><img src="temeg/werwer.jfif" alt="facebook"></a>
+                        <a href="#"><img src="temeg/yuyuy.jfif" alt="instagram"></a>
+                        <a href="#"><img src="temeg/kgkg.png" alt="twiter"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+
+</html>
